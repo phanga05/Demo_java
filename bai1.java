@@ -8,11 +8,14 @@ package BaiTapThucHanh;
  *
  * @author PHUC AN
  */
-
+import java.util.Scanner;
+        
 public class bai1 {
     public static void main(String[] args) {
-        String ten = "Nguyen Phuc An";
+        Scanner sc = new Scanner(System.in);
+        String ten;
+        ten = sc.nextLine();
         System.out.println("Hello " + ten);
     }
-      
+
 }
