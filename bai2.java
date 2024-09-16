@@ -10,14 +10,13 @@ package BaiTapThucHanh;
  */
 import java.util.Scanner;
 public class bai2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner sc = new Scanner(System.in);
-        String ten;
         int tuoi,n;
         float chieuCao;
         boolean check;
-        System.out.println("Nhap ten: ");
-        ten = sc.nextLine();
+        char[] ten = {'N', 'g', 'u', 'y', 'e', 'n', ' ', 'P', 'h', 'u', 'c', ' ', 'A', 'n'};
         System.out.println("Nhap tuoi: ");
         tuoi = sc.nextInt();
         System.out.println("Nhap chieu cao theo don vi do la m: ");
@@ -32,9 +31,9 @@ public class bai2 {
         System.out.println("Tuoi : " + tuoi);
         System.out.println("Chieu cao: " + chieuCao + " cm");
         if(check)
-            System.out.println(ten + " Co yeu thich lap trinh");
+            System.out.println("Co yeu thich lap trinh");
         else    
-            System.out.println(ten + " Khong yeu thich lap trinh");
+            System.out.println("Khong yeu thich lap trinh");
         
                 
         
