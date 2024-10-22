@@ -57,6 +57,7 @@ public class QuanLyTaiKhoan {
 	}
 	public static void xoaTaiKhoan(ArrayList<TaiKhoanNganHang> list, TaiKhoanNganHang tk) 
 	{
+		System.out.println("\n<<Xóa tài khoản>>");
 		Scanner sc = new Scanner(System.in);
 		int check = 1;
 		System.out.println("Bạn muốn xóa tài khoản?");
@@ -76,11 +77,14 @@ public class QuanLyTaiKhoan {
 					{
 						list.remove(i);
 						System.out.println("Xóa tài khoản thành công");
+						System.out.println("<<Thông báo>> Đổi mật khẩu thành công");
+						System.out.println("nhấn phím ENTER để thoát");
+						sc.nextLine();
 						return;
 					}
 					else
 					{
-						System.out.println("<>Thông báo>> Mật khẩu sai\n");
+						System.out.println("<<Thông báo>> Mật khẩu sai\n");
 						System.out.println("1: Nhập lại mật khẩu  \n0: Thoát");
 						check = sc.nextInt();
 						sc.nextLine();
@@ -149,7 +153,8 @@ public class QuanLyTaiKhoan {
 			System.out.println("1: Kiểm tra số dư");
 			System.out.println("2: Gửi tiền");
 			System.out.println("3: Rút tiền");
-			System.out.println("4: Xóa tài khoản");
+			System.out.println("4: Đổi mật khẩu");
+			System.out.println("5: Xóa tài khoản");
 			System.out.println("0: Đăng xuất");
 			choice = sc.nextInt();
 			switch(choice)
@@ -169,7 +174,8 @@ public class QuanLyTaiKhoan {
 					sc.nextLine();
 					sc.nextLine();
 					break;
-			case 4: xoaTaiKhoan(list, tk); return;
+			case 4: tk.rePassword(); break;
+			case 5: xoaTaiKhoan(list, tk); return;
 			case 0: return;
 			}
 		}

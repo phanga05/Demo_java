@@ -75,7 +75,9 @@ public class TaiKhoanNganHang {
 	public void kiemTraSoDu() {
 		System.out.println("<<thành công>> Tài khoảng "+ this.soTaiKhoan +" | Số dư :"+ this.soDu +"VND");
 	}
-	public void rePassword() {
+	public void rePassword() 
+	{
+		System.out.println("\n<<Đổi mật khẩu>>");
 		Scanner sc = new Scanner(System.in);
 		String mkc = null;
 		int choice = 1;
@@ -83,19 +85,25 @@ public class TaiKhoanNganHang {
 		{
 			System.out.print("Nhập mật khẩu cũ: ");
 			mkc = sc.nextLine();
-			if(this.matKhau == mkc)
+			if(this.matKhau.equals(mkc))
 			{
 				System.out.print("Nhập mật khẩu mới: ");
 				String mkm = sc.nextLine();
 				this.matKhau = mkm;
+				System.out.println("<<Thông báo>> Đổi mật khẩu thành công");
+				System.out.println("nhấn phím ENTER để thoát");
+				sc.nextLine();
+				return;
 			}
 			else
 			{
-				System.out.println("<<Thông báo>> Mật khẩu sai");
-				System.out.println("Nhập 1 để nhập lại mật khẩu cũ hoặc nhập 0 để thoát");
+				System.out.println("\n<<Thông báo>> Mật khẩu sai");
+				System.out.println("1: Nhập lại mật khẩu  \n0: Thoát");
 				choice = sc.nextInt();
+				sc.nextLine();
 			}
-				
+			if(choice == 0)
+				return;
 		}
 	}
 }
